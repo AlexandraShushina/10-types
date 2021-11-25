@@ -33,7 +33,7 @@
       width: 50px;
       position: relative;
       top: 70px;
-      left: 10px;
+      left: 800px;
       background-color: yellow;
       animation: form 1s linear alternate infinite;
     }
@@ -110,16 +110,29 @@
       left: 515px;
     }
     .ten {
-
+      height: 70px;
+      width: 70px;
+      position: absolute;
+      top: 250px;
+      left: 800px;
+      border-radius: 50px;
+      background: url(images/moon.png);
+      background-size: 100%;
+      animation: circ 6s linear infinite;
+    }
+    .text2 {
+      position: absolute;
+      left: 910px;
+      top: 250px;
     }
     @keyframes color {
-      to { opacity: 0;}
+      to {opacity: 0;}
     }
     @keyframes rot {
       to {transform: rotate(360deg);}
     }
     @keyframes form {
-    to { border-radius: 25px; }
+    to {border-radius: 25px; }
     }
     @keyframes photo {
       0% {background-color: brown; left: 10px; top: 70px;}
@@ -143,6 +156,10 @@
       50% {width: 100px; height: 300px; border-radius: 0;}
       75% {width: 100px; height: 300px; border-radius: 50px;}
     }
+    @keyframes circ {
+      from {transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+      to {transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
   </style>
 </head>
 <body>
@@ -150,7 +167,7 @@
   <div class="one"></div>
   <div class="two"></div>
   <div class="three"></div>
-  <p class="text">наведи</p>
+  <p class="text2">наведи</br>на жёлтый</p>
   <div class="four"></div>
   <div class="five"></div>
   <div class="five delay"></div>
@@ -159,5 +176,6 @@
   <div class="rec eight"></div>
   <div class="nine"></div>
   <p class="text1">наведи</p>
+  <div class="ten">
 </body>
 </html>
