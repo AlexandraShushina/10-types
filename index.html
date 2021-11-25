@@ -8,26 +8,105 @@
   <style media="screen">
     .text {
       position: relative;
-      left: 55px;
+      left: 75px;
     }
     .one {
       height: 50px;
       width: 150px;
       position: absolute;
       top: 0px;
-      left: 0px;
+      left: 20px;
       background-color: orange;
       animation: color 1s alternate ease-in infinite;
-      }
-      @keyframes color {
-        from {background-color: orange;}
-        to {background-color: green; opacity: .3;}
-      }
-      .two
+    }
+    .two {
+      height: 150px;
+      width: 50px;
+      position: relative;
+      top: 25px;
+      left: 80px;
+      background-color: blue;
+      animation: rot 2s ease-in-out alternate infinite;
+    }
+    .three {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      top: 70px;
+      left: 10px;
+      background-color: yellow;
+      animation: form 1s linear alternate infinite;
+    }
+    .three:hover {
+      background-color: green;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .four {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      top: 70px;
+      left: 10px;
+      background-color: brown;
+      border-radius: 10px;
+      animation: photo 4s ease-in-out alternate infinite;
+    }
+    .five {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 0;
+      left: 400px;
+      background-color: orange;
+      border-radius: 25px;
+      animation: scale 4s linear infinite;
+      animation-delay: 1s;
+    }
+    .delay {
+      animation-delay: -1s;
+    }
+    .six {
+
+    }
+    .seven {
+
+    }
+    .eight {
+
+    }
+    @keyframes color {
+      to { opacity: 0;}
+    }
+    @keyframes rot {
+      to {transform: rotate(360deg);}
+    }
+    @keyframes form {
+    to { border-radius: 25px; }
+    }
+    @keyframes photo {
+      0% {background-color: brown; left: 10px; top: 70px;}
+      20% {background: url(images/cat1.jpg); background-size: 100%; left: 110px; top: 70px;}
+      55% {background: url(images/cat2.jpg); background-size: 100%; left: 110px; top: 170px;}
+      80% {background-color: brown; left: 10px; top: 70px;}
+    }
+    @keyframes scale {
+      0% {left: 400px; top: 0;}
+      20% {background-size: 30%; left: 500px; top: 0;}
+      40% {background-size: 10%; left: 500px; top: 100px;}
+      60% {background-size: 30%; left: 400px; top: 100px;}
+      80% {background-size: 100%; left: 400px; top: 0;}
+    }
   </style>
 </head>
 <body>
   <p class="text">мяу!</p>
   <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <p class="text">наведи</p>
+  <div class="four"></div>
+  <div class="five"></div>
+  <div class="five delay"></div>
 </body>
 </html>
