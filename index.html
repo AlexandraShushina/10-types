@@ -66,13 +66,33 @@
     .delay {
       animation-delay: -1s;
     }
+    .rec {
+      height: 10px;
+      width: 300px;
+      position: relative;
+      top: 200px;
+      left: 10px;
+      background-color: blue;
+      animation: run 2s alternate infinite;
+    }
     .six {
-
+      animation-timing-function: ease-in;
+      animation-duration: 1s;
+      margin-top: 20px;
     }
     .seven {
-
+      animation-timing-function: ease-out;
+      animation-duration: 1.5s;
+      margin-top: 20px;
     }
     .eight {
+      animation-timing-function: cubic-bezier(-.9, .1, -.5, -.1);
+      margin-top: 20px;
+    }
+    .nine {
+
+    }
+    .ten {
 
     }
     @keyframes color {
@@ -97,6 +117,9 @@
       60% {background-size: 30%; left: 400px; top: 100px;}
       80% {background-size: 100%; left: 400px; top: 0;}
     }
+    @keyframes run {
+      to {left: 500px;}
+    }
   </style>
 </head>
 <body>
@@ -108,5 +131,8 @@
   <div class="four"></div>
   <div class="five"></div>
   <div class="five delay"></div>
+  <div class="rec six"></div>
+  <div class="rec seven"></div>
+  <div class="rec eight"></div>
 </body>
 </html>
